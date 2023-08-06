@@ -9,6 +9,10 @@
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.423);
 }
 
+.form:focus {
+  transform: scale(1.09);
+}
+
 .info_form_input {
   background-color: #e0e0e090;
   border: none;

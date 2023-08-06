@@ -59,6 +59,11 @@
   overflow: hidden;
   justify-content: center;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.423);
+  transition: transform 0.3s ease;
+}
+
+.section_1:hover {
+  transform: scale(1.01);
 }
 
 .weather_description {
@@ -102,6 +107,10 @@
   border-radius: 22.94px;
   width: 100%;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.423);
+}
+
+.section_2:hover {
+  transform: scale(1.01);
 }
 
 .info_section_2 {
@@ -175,9 +184,9 @@
 
 .change_meassure {
   padding: 0.5rem;
-  color: #4580ba;
+  color: black;
+  font-weight: bold;
   font-size: 0.7rem;
-  text-shadow: 0px 1px 1.1px rgb(1, 1, 1);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.423);
   letter-spacing: 1px;
   cursor: pointer;
@@ -192,6 +201,7 @@
 
 .change_meassure:hover {
   transform: scale(1.09);
+  background-color: #ccc;
 }
 
 .footer {

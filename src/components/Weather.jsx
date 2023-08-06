@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import InfoSection from "./InfoSection";
 
-const Weather = ({ weather, daysWeatherInfo }) => {
+const Weather = ({ weather }) => {
   //========================States==========================//
   const [tempUnit, setTempUnit] = useState("C");
   const [temp, setTemp] = useState(null);
