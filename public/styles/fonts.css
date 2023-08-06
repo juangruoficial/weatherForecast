@@ -1,0 +1,5 @@
+/* fonts.css */
+@font-face {
+  font-family: "extraordinary";
+  src: url("/fonts/extraordinary.woff") format("woff");
+}

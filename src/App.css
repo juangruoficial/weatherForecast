@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: black;
+  text-shadow: 0px 2.1px 2.1px white;
+  font-size: 0.8rem;
+}
+
+.background {
+  background-size: cover;
+  object-fit: cover;
+}
+
+.clear_sky_d {
+  background-image: url(/images/clearsky_d.jpg);
+}
+
+.few_clouds_d {
+  background-image: url(/images/fewclouds_d.jpg);
+}
+
+.scattered_clouds_d {
+  background-image: url(/images/scattered_clouds_d.jpg);
+}
+
+.broken_clouds_d {
+  background-image: url(/images/brokencloud_d.jpg);
+}
+.shower_rain_d {
+  background-image: url(/images/showerrain_d.jpg);
+}
+.rain_d {
+  background-image: url(/images/rain_d.jpg);
+}
+.thunderstorm_d {
+  background-image: url(/images/thunderstorm_d.jpg);
+}
+.snow_d {
+  background-image: url(/images/snow_d.jpg);
+}
+.mist_d {
+  background-image: url(/images/mist_d.jpg);
+}
+
+.clear_sky_n {
+  background-image: url(/images/clearsky_n.jpg);
+}
+
+.few_clouds_n {
+  background-image: url(/images/fewclouds_n.jpg);
+}
+
+.scattered_clouds_n {
+  background-image: url(/images/scattered_clouds_n.jpg);
+}
+
+.broken_clouds_n {
+  background-image: url(/images/brokencloud_n.jpg);
+}
+.shower_rain_n {
+  background-image: url(/images/showerrain_n.jpg);
+}
+.rain_n {
+  background-image: url(/images/showerrain_n.jpg);
+}
+.thunderstorm_n {
+  background-image: url(/images/thunderstorm_n.jpg);
+}
+.snow_n {
+  background-image: url(/images/snow_n.jpg);
+}
+.mist_n {
+  background-image: url(/images/mist_n.jpg);
+}

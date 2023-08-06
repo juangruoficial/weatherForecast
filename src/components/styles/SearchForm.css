@@ -1,0 +1,47 @@
+.form {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  border-radius: 1rem;
+  justify-content: center;
+  overflow: hidden;
+  border: none;
+}
+
+.info_form_input {
+  background-color: #e0e0e090;
+  border: none;
+  padding: 0.5rem;
+  width: 70%;
+  outline: none;
+}
+
+.info_form_input::placeholder {
+  color: rgba(
+    0,
+    0,
+    0,
+    0.575
+  ); /* Cambia el color del marcador de posición a rojo */
+}
+
+.info_form_button {
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  background: linear-gradient(
+    90deg,
+    rgba(45, 44, 57, 0.409) 1%,
+    rgba(28, 35, 37, 0.212) 48%,
+    rgb(16, 48, 55) 100%
+  );
+  border: none;
+  width: 30%;
+  text-shadow: 0px 2px 2px #4580ba;
+  transition: transform 0.3s ease;
+}
+
+.info_form_button:hover {
+  transform: scale(1.09);
+}

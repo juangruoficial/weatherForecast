@@ -1,0 +1,241 @@
+.main_section {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px none;
+  height: 100vh;
+  gap: 1rem;
+  min-width: 100px;
+}
+
+/* .circle-wrapper {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  height: 24px;
+  width: 50px;
+}
+
+.circle {
+  background-color: #9dc3e8;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+} */
+.title_main_section {
+  font-size: 2rem;
+  text-shadow: 0px 1.1px 2.1px white;
+  font-weight: bold;
+}
+.city {
+  width: 100%;
+  color: #000000;
+  font-family: "Lato-Bold", Helvetica;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0px 1.1px 2.1px white;
+}
+
+.weather_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.section_1 {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #e0e0e080;
+  border-radius: 38px;
+  height: 216px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.weather_description {
+  color: black;
+  font-family: "Lato-Medium", Helvetica;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: normal;
+  text-align: center;
+  text-shadow: 0px 2px 2px #ffffff;
+}
+
+.info_weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather_img {
+  width: 50%;
+  width: 150px;
+  flex-grow: auto;
+}
+
+.temp_value {
+  color: #000000;
+  font-family: "Lato-Light", Helvetica;
+  font-size: 2.5rem;
+  font-weight: 300;
+  width: 50%;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  text-shadow: 0px 4.1px 4.1px white;
+  align-self: center;
+  padding: 1.5rem;
+}
+
+.section_2 {
+  display: flex;
+  background-color: #e0e0e080;
+  border-radius: 22.94px;
+  width: 100%;
+}
+
+.info_section_2 {
+  display: flex;
+  padding: 1rem;
+  width: 33%;
+  align-self: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.icons {
+  align-self: center;
+}
+
+.text_value {
+  font-size: 1rem;
+}
+
+.wind_value {
+  color: #000000;
+  font-family: "Lato-Bold", Helvetica;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  text-shadow: 0px 0.79px 0.79px #00000040;
+}
+
+.wind_icon {
+  height: 25px;
+  width: 25px;
+}
+
+.separator {
+  background-color: #0000003b;
+  border-radius: 2px;
+  height: 80%;
+  align-self: center;
+  width: 3px;
+}
+
+.humidity_value {
+  color: #000000;
+  font-family: "Lato-Bold", Helvetica;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  text-shadow: 0px 0.79px 0.79px #00000040;
+}
+
+.humidity_icon {
+  height: 24px;
+  width: 24px;
+}
+
+.pressure_value {
+  color: #000000;
+  font-family: "Lato-Bold", Helvetica;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+  text-shadow: 0px 0.79px 0.79px #00000040;
+}
+
+.pressure_icon {
+  height: 26px;
+  width: 26px;
+}
+
+.change_meassure {
+  padding: 0.5rem;
+  color: #4580ba;
+  font-size: 0.7rem;
+  text-shadow: 0px 1px 1.1px rgb(1, 1, 1);
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #e0e0e080;
+  border: none;
+  border-radius: 0.7rem;
+  height: 50px;
+  width: 30%;
+  transition: transform 0.5s ease;
+}
+
+.change_meassure:hover {
+  transform: scale(1.09);
+}
+
+.footer {
+  margin-top: 30px;
+  width: 100%;
+  font-family: "Lato-Bold", Helvetica;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+  text-shadow: 0px 1.1px 2.1px white;
+  font-size: 1remrem;
+  align-self: flex-end;
+}
+
+@media screen and (min-width: 700px) {
+  .main_section {
+    min-width: 700px;
+  }
+
+  .weather_info {
+    flex-direction: row;
+  }
+
+  .section_1 {
+    width: 85%;
+  }
+
+  .section_2 {
+    flex-direction: column;
+    width: 15%;
+  }
+  .separator {
+    width: 80%;
+  }
+
+  .footer {
+    margin-top: 50px;
+  }
+
+  .title_main_section {
+    margin-bottom: 10px;
+  }
+
+  .main_section {
+    gap: 1.5rem;
+  }
+
+  .change_meassure {
+    font-size: 1rem;
+  }
+}

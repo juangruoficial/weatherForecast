@@ -1,0 +1,21 @@
+export const backgroundAccordingToWeather = {
+  "01d": "clear_sky_d",
+  "02d": "few_clouds_d",
+  "03d": "scattered_clouds_d",
+  "04d": "broken_clouds_d",
+  "09d": "shower_rain_d",
+  "10d": "rain_d",
+  "11d": "thunderstorm_d",
+  "13d": "snow_d",
+  "50d": "mist_d",
+
+  "01n": "clear_sky_n",
+  "02n": "few_clouds_n",
+  "03n": "scattered_clouds_n",
+  "04n": "broken_clouds_n",
+  "09n": "shower_rain_n",
+  "10n": "rain_n",
+  "11n": "thundnrstorm_d",
+  "13n": "snow_n",
+  "50n": "mist_n",
+};
