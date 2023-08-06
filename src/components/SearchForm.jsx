@@ -10,6 +10,7 @@ const SearchForm = ({ onSearch }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     onSearch(cityName);
+    setCityName("");
   };
 
   return (

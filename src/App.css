@@ -1,8 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+:root {
+  --text-shadow: 1px -1px 10px rgb(255, 255, 255);
+  --text-shadowBlue: 0px 2px 2px #4580ba;
+  --box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.706);
+  --colorText: black;
+  --background-colorBoxes: rgba(255, 255, 255, 0.199);
+  --backgroundGradient: linear-gradient(
+    90deg,
+    rgba(45, 44, 57, 0.409) 1%,
+    rgba(28, 35, 37, 0.212) 48%,
+    rgb(16, 48, 55) 100%
+  );
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   user-select: none;
+  font-family: "Lato", sans-serif;
 }
 
 main {
@@ -10,16 +27,9 @@ main {
   justify-content: center;
   height: 100vh;
 }
-a {
-  text-decoration: none;
-  color: black;
-  text-shadow: 0px 2.1px 2.1px white;
-  font-size: 0.8rem;
-}
 
 .background {
   background-size: cover;
-  object-fit: cover;
 }
 
 .clear_sky_d {

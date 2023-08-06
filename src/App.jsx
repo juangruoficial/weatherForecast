@@ -72,8 +72,6 @@ function App() {
           ) : (
             <Weather weather={weatherInfo} daysWeatherInfo={daysWeatherInfo} />
           )}
-
-          <footer className="footer">Created by Juan David Cruz</footer>
         </section>
       </main>
     </>

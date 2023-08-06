@@ -29,7 +29,7 @@ const Weather = ({ weather }) => {
 
   return (
     <>
-      <div className="circle-wrapper">
+      <div className="circle_wrapper">
         <div className="circle" />
       </div>
 
