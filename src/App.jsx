@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./components/styles/Weather.css";
 import "./App.css";
 import "./components/styles/SearchForm.css";
 import "./components/styles/Preloader.css";

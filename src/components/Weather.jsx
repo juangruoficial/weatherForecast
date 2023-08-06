@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import InfoSection from "./InfoSection";
-import DaysWeatherInfo from "./DaysWeatherInfo";
 
 const Weather = ({ weather, daysWeatherInfo }) => {
   //========================States==========================//

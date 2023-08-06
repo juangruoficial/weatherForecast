@@ -5,9 +5,9 @@
   justify-content: center;
   align-items: center;
   border: 1px none;
+  width: 350px;
   height: 100vh;
   gap: 1rem;
-  min-width: 100px;
 }
 
 /* .circle-wrapper {
@@ -24,18 +24,20 @@
   width: 20px;
 } */
 .title_main_section {
-  font-size: 2rem;
-  text-shadow: 0px 1.1px 2.1px white;
+  font-size: 1.5rem;
+  text-shadow: 1px -1px 5px rgba(255, 255, 255, 0.855);
   font-weight: bold;
 }
 .city {
   width: 100%;
-  color: #000000;
+  padding: 0.2rem;
   font-family: "Lato-Bold", Helvetica;
   font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
-  text-shadow: 0px 1.1px 2.1px white;
+  text-shadow: 1px -1px 5px rgba(255, 255, 255, 0.855);
+
+  border-radius: 1rem;
 }
 
 .weather_info {
@@ -50,11 +52,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: #e0e0e080;
+  background-color: rgba(255, 255, 255, 0.199);
+  backdrop-filter: blur(4px);
   border-radius: 38px;
   height: 216px;
   overflow: hidden;
   justify-content: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.423);
 }
 
 .weather_description {
@@ -64,7 +68,7 @@
   font-weight: 500;
   line-height: normal;
   text-align: center;
-  text-shadow: 0px 2px 2px #ffffff;
+  text-shadow: 0.5px 1px 3px rgba(255, 255, 255, 0.556);
 }
 
 .info_weather {
@@ -74,30 +78,30 @@
 }
 
 .weather_img {
-  width: 50%;
+  display: block;
   width: 150px;
-  flex-grow: auto;
 }
 
 .temp_value {
   color: #000000;
   font-family: "Lato-Light", Helvetica;
-  font-size: 2.5rem;
-  font-weight: 300;
+  font-size: 3rem;
   width: 50%;
   letter-spacing: 0;
   line-height: normal;
   text-align: center;
-  text-shadow: 0px 4.1px 4.1px white;
+  text-shadow: 0.5px 1px 3px rgba(255, 255, 255, 0.556);
   align-self: center;
-  padding: 1.5rem;
+  padding: 0.5rem;
 }
 
 .section_2 {
   display: flex;
-  background-color: #e0e0e080;
+  background-color: rgba(255, 255, 255, 0.199);
+  backdrop-filter: blur(4px);
   border-radius: 22.94px;
   width: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.423);
 }
 
 .info_section_2 {
@@ -110,11 +114,13 @@
 }
 
 .icons {
+  box-shadow: 0px 1px 6px rgba(255, 255, 255, 0.189);
   align-self: center;
 }
 
 .text_value {
   font-size: 1rem;
+  text-shadow: 0.5px 1px 3px rgba(255, 255, 255, 0.556);
 }
 
 .wind_value {
@@ -124,7 +130,6 @@
   letter-spacing: 0;
   line-height: normal;
   text-align: center;
-  text-shadow: 0px 0.79px 0.79px #00000040;
 }
 
 .wind_icon {
@@ -147,7 +152,6 @@
   letter-spacing: 0;
   line-height: normal;
   text-align: center;
-  text-shadow: 0px 0.79px 0.79px #00000040;
 }
 
 .humidity_icon {
@@ -162,7 +166,6 @@
   letter-spacing: 0;
   line-height: normal;
   text-align: center;
-  text-shadow: 0px 0.79px 0.79px #00000040;
 }
 
 .pressure_icon {
@@ -175,14 +178,16 @@
   color: #4580ba;
   font-size: 0.7rem;
   text-shadow: 0px 1px 1.1px rgb(1, 1, 1);
-  font-weight: bold;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.423);
+  letter-spacing: 1px;
   cursor: pointer;
-  background-color: #e0e0e080;
+  background-color: rgba(255, 255, 255, 0.199);
+  backdrop-filter: blur(4px);
   border: none;
   border-radius: 0.7rem;
-  height: 50px;
+  height: 40px;
   width: 30%;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .change_meassure:hover {
@@ -190,16 +195,14 @@
 }
 
 .footer {
-  margin-top: 30px;
   width: 100%;
   font-family: "Lato-Bold", Helvetica;
   font-size: 16px;
   font-weight: 700;
   text-align: center;
   color: black;
-  text-shadow: 0px 1.1px 2.1px white;
-  font-size: 1remrem;
-  align-self: flex-end;
+  text-shadow: 1px -1px 5px rgba(255, 255, 255, 0.855);
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 700px) {
