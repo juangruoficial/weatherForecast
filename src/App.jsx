@@ -7,7 +7,7 @@ import axios from "axios";
 import Weather from "./components/Weather";
 import SearchForm from "./components/SearchForm";
 import { backgroundAccordingToWeather } from "./utilities/utilities.js";
-
+import { Sugar } from "react-preloaders";
 function App() {
   //============================ImagewetaherState===================//
   const [background, setbackground] = useState(null);
@@ -16,6 +16,7 @@ function App() {
   const [cityWeather, setCityWeather] = useState(null);
   const [daysWeatherInfo, setDaysWeatherInfo] = useState(null);
   const [isDark, setIsDark] = useState(true);
+  const [locationPermission, setLocationPermission] = useState(null);
 
   const API_KEY = "72b39761e7f01caa4c4d9a7ce3aa447f";
 
@@ -36,6 +37,14 @@ function App() {
       });
   };
 
+  const error = (err) => {
+    if (err.code) {
+      // El usuario denegó el acceso a la ubicación
+      setLocationPermission(false);
+      handleCitySearch("Bogota");
+    }
+  };
+
   const handleCitySearch = (city) => {
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
     axios
@@ -53,7 +62,7 @@ function App() {
   };
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(succes);
+    navigator.geolocation.getCurrentPosition(succes, error);
   }, []);
 
   //=====================================backgroundEffect=================//
@@ -102,6 +111,7 @@ function App() {
           )}
         </section>
       </main>
+      <Sugar animation="slide" background="#000000" time={1500} />
     </>
   );
 }
