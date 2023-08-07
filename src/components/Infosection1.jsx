@@ -1,8 +1,14 @@
 export const Infosection1 = ({ weather, temp, tempUnit, isDark }) => {
+  const description = weather?.weather[0].description;
+  const capitalizeFirstLetter = (string) => {
+    if (!string) return;
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
   return (
     <section className={`section_1  ${isDark ? "dark_section" : ""}`}>
       <h4 className={`weather_description ${isDark ? "dark_text" : ""}`}>
-        {weather?.weather[0].description}
+        {capitalizeFirstLetter(description)}
       </h4>
       <article className="info_weather">
         <span className={`temp_value ${isDark ? "dark_text" : ""}`}>

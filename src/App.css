@@ -13,6 +13,7 @@
     rgb(16, 48, 55) 100%
   );
 
+  --colorTextDark: white;
   --text-shadowDark: 1px -1px 10px rgb(0, 0, 0);
   --background-colorBoxesDark: rgba(84, 61, 108, 0.479);
   --backgroundGradientDark: linear-gradient(
@@ -21,6 +22,7 @@
     rgb(0, 0, 0) 48%,
     rgb(9, 9, 9) 100%
   );
+  --background-colorBoxesDarkHover: rgba(160, 121, 208, 0.479);
 }
 
 * {

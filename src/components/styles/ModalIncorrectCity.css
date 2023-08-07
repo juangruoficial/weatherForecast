@@ -1,0 +1,24 @@
+.modal_incorrect_city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(57, 47, 72, 0.348);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+}
+
+.modal_text {
+  padding: 2rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 2rem;
+  width: 60%;
+  height: 150px;
+  background-color: rgba(185, 123, 123, 0.638);
+  color: rgb(57, 8, 8);
+  text-align: center;
+}

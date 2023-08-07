@@ -8,6 +8,8 @@ import Weather from "./components/Weather";
 import SearchForm from "./components/SearchForm";
 import { backgroundAccordingToWeather } from "./utilities/utilities.js";
 import { Sugar } from "react-preloaders";
+import ModalWrongCity from "./components/ModalWrongCity";
+
 function App() {
   //============================ImagewetaherState===================//
   const [background, setbackground] = useState(null);
@@ -16,7 +18,7 @@ function App() {
   const [cityWeather, setCityWeather] = useState(null);
   const [daysWeatherInfo, setDaysWeatherInfo] = useState(null);
   const [isDark, setIsDark] = useState(true);
-  const [locationPermission, setLocationPermission] = useState(null);
+  const [correctCityName, setCorrectCityName] = useState(false);
 
   const API_KEY = "72b39761e7f01caa4c4d9a7ce3aa447f";
 
@@ -37,14 +39,6 @@ function App() {
       });
   };
 
-  const error = (err) => {
-    if (err.code) {
-      // El usuario denegó el acceso a la ubicación
-      setLocationPermission(false);
-      handleCitySearch("Bogota");
-    }
-  };
-
   const handleCitySearch = (city) => {
     const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`;
     axios
@@ -54,6 +48,7 @@ function App() {
       })
       .catch((error) => {
         console.error(error);
+        setCorrectCityName(true);
       });
   };
 
@@ -61,8 +56,18 @@ function App() {
     setIsDark(!isDark);
   };
 
+  const closeModal = () => {
+    setCorrectCityName(false);
+  };
+  const accesLocationDenied = (err) => {
+    if (err.code) {
+      // El usuario denegó el acceso a la ubicación
+      handleCitySearch("Bogota");
+    }
+  };
+
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(succes, error);
+    navigator.geolocation.getCurrentPosition(succes, accesLocationDenied);
   }, []);
 
   //=====================================backgroundEffect=================//
@@ -78,7 +83,10 @@ function App() {
 
   return (
     <>
+      <Sugar animation="slide" background="#000000" />
+      <ModalWrongCity correctCityName={correctCityName} toClose={closeModal} />
       <main className={`background ${background}`}>
+        {correctCityName && <div>HOLA MUNDI</div>}
         <section className="main_section">
           <button className="button_dark_mode" onClick={toggleDarkMode}>
             {isDark ? (
@@ -111,7 +119,6 @@ function App() {
           )}
         </section>
       </main>
-      <Sugar animation="slide" background="#000000" time={1500} />
     </>
   );
 }

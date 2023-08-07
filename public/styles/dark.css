@@ -1,6 +1,10 @@
 .dark_section {
   background-color: var(--background-colorBoxesDark);
 }
+
+.dark_section:hover {
+  background-color: var(--background-colorBoxesDarkHover);
+}
 .dark_text {
   color: white;
   text-shadow: var(--text-shadowDark);
@@ -12,6 +16,7 @@
 
 .dark_input {
   background-color: var(--background-colorBoxesDark);
+  color: var(--colorTextDark);
 }
 
 .dark_input::placeholder {
