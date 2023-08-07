@@ -12,6 +12,15 @@
     rgba(28, 35, 37, 0.212) 48%,
     rgb(16, 48, 55) 100%
   );
+
+  --text-shadowDark: 1px -1px 10px rgb(0, 0, 0);
+  --background-colorBoxesDark: rgba(84, 61, 108, 0.479);
+  --backgroundGradientDark: linear-gradient(
+    90deg,
+    rgb(25, 4, 253) 1%,
+    rgb(0, 0, 0) 48%,
+    rgb(9, 9, 9) 100%
+  );
 }
 
 * {
@@ -20,6 +29,7 @@
   box-sizing: border-box;
   user-select: none;
   font-family: "Lato", sans-serif;
+  transition: all 0.3s ease;
 }
 
 main {
@@ -92,4 +102,18 @@ main {
 }
 .mist_n {
   background-image: url(/images/mist_n.jpg);
+}
+
+.button_dark_mode {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.button_dark_mode:hover {
+  transform: translateY(-5px) scale(1.09);
+}
+
+.dark_mode_icon {
+  width: 30px;
 }

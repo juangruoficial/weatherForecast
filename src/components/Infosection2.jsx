@@ -1,4 +1,4 @@
-const Infosection2 = ({ weather, meassure, value, notation }) => {
+const Infosection2 = ({ meassure, value, notation, isDark }) => {
   return (
     <article className="info_section_2">
       <img
@@ -6,7 +6,9 @@ const Infosection2 = ({ weather, meassure, value, notation }) => {
         alt={meassure}
         src={`/images/${meassure}.png`}
       />
-      <span className={`text_value ${meassure}_value`}>
+      <span
+        className={`text_value ${meassure}_value ${isDark ? "dark_text" : ""}`}
+      >
         {value} <br />
         {notation}
       </span>

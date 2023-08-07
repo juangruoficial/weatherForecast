@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SearchForm = ({ onSearch }) => {
+const SearchForm = ({ onSearch, isDark }) => {
   const [cityName, setCityName] = useState("");
 
   const handleInputChange = (event) => {
@@ -18,7 +18,7 @@ const SearchForm = ({ onSearch }) => {
       <input
         id="cityName"
         placeholder="Type a city or a country ..."
-        className="info_form_input"
+        className={`info_form_input ${isDark ? "dark_input" : ""}`}
         type="text"
         value={cityName}
         onChange={handleInputChange}

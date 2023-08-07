@@ -1,9 +1,11 @@
-export const Infosection1 = ({ weather, temp, tempUnit }) => {
+export const Infosection1 = ({ weather, temp, tempUnit, isDark }) => {
   return (
-    <section className="section_1">
-      <h4 className="weather_description">{weather?.weather[0].description}</h4>
+    <section className={`section_1  ${isDark ? "dark_section" : ""}`}>
+      <h4 className={`weather_description ${isDark ? "dark_text" : ""}`}>
+        {weather?.weather[0].description}
+      </h4>
       <article className="info_weather">
-        <span className="temp_value">
+        <span className={`temp_value ${isDark ? "dark_text" : ""}`}>
           {temp} {tempUnit === "C" ? "C°" : "F°"}
         </span>
         <img

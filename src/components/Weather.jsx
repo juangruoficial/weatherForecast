@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import InfoSection from "./InfoSection";
 
-const Weather = ({ weather }) => {
+const Weather = ({ weather, isDark }) => {
   //========================States==========================//
   const [tempUnit, setTempUnit] = useState("C");
   const [temp, setTemp] = useState(null);
@@ -33,11 +33,21 @@ const Weather = ({ weather }) => {
         <div className="circle" />
       </div>
 
-      <h1 className="city">{weather?.name}</h1>
+      <h1 className={`city ${isDark ? "dark_text" : ""}`}>{weather?.name}</h1>
 
-      <InfoSection weather={weather} temp={temp} tempUnit={tempUnit} />
+      <InfoSection
+        weather={weather}
+        temp={temp}
+        tempUnit={tempUnit}
+        isDark={isDark}
+      />
 
-      <button onClick={toggleTemperatureUnit} className="change_meassure">
+      <button
+        onClick={toggleTemperatureUnit}
+        className={`change_meassure  ${isDark ? "dark_section" : ""} ${
+          isDark ? "dark_text" : ""
+        }`}
+      >
         Cambiar a {tempUnit === "C" ? "F°" : "C°"}
       </button>
     </>

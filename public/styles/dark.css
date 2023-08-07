@@ -1,0 +1,24 @@
+.dark_section {
+  background-color: var(--background-colorBoxesDark);
+}
+.dark_text {
+  color: white;
+  text-shadow: var(--text-shadowDark);
+}
+
+.dark_gradient {
+  background-color: var(--backgroundGradientDark);
+}
+
+.dark_input {
+  background-color: var(--background-colorBoxesDark);
+}
+
+.dark_input::placeholder {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.55
+  ); /* Cambia el color del marcador de posición a rojo */
+}
