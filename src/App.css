@@ -15,7 +15,7 @@
 
   --colorTextDark: white;
   --text-shadowDark: 1px -1px 10px rgb(0, 0, 0);
-  --background-colorBoxesDark: rgba(84, 61, 108, 0.479);
+  --background-colorBoxesDark: rgba(61, 44, 78, 0.479);
   --backgroundGradientDark: linear-gradient(
     90deg,
     rgb(25, 4, 253) 1%,

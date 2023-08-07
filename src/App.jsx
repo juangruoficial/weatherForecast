@@ -8,33 +8,40 @@ import Weather from "./components/Weather";
 import SearchForm from "./components/SearchForm";
 import { backgroundAccordingToWeather } from "./utilities/utilities.js";
 import ModalWrongCity from "./components/ModalWrongCity";
+import { Sugar } from "react-preloaders";
 
 function App() {
-  //============================ImagewetaherState===================//
+  //=====================preloadState===================//
+  const [loading, setLoading] = useState(true);
+  const [isDark, setIsDark] = useState(true);
+
+  //============================ImageaccordingToweatherState===================//
   const [background, setbackground] = useState(null);
+
   //============================WeatherStates===================//
   const [weatherInfo, setWeatherInfo] = useState(null);
   const [cityWeather, setCityWeather] = useState(null);
-  const [daysWeatherInfo, setDaysWeatherInfo] = useState(null);
-  const [isDark, setIsDark] = useState(true);
+
   const [correctCityName, setCorrectCityName] = useState(false);
 
   const API_KEY = "72b39761e7f01caa4c4d9a7ce3aa447f";
 
+  //============================Functions==========================//
+  axios;
   const succes = (pos) => {
     const lat = pos.coords.latitude;
     const lon = pos.coords.longitude;
-
     const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
-    const URL2 = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&cnt=7&appid=${API_KEY}`;
 
-    Promise.all([axios.get(URL), axios.get(URL2)])
-      .then((responses) => {
-        setWeatherInfo(responses[0].data);
-        setDaysWeatherInfo(responses[1].data);
+    axios
+      .get(URL)
+      .then((res) => {
+        setWeatherInfo(res.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
+        setLoading(false);
       });
   };
 
@@ -44,10 +51,12 @@ function App() {
       .get(URL)
       .then(({ data }) => {
         setCityWeather(data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
         setCorrectCityName(true);
+        setLoading(false);
       });
   };
 
@@ -58,11 +67,9 @@ function App() {
   const closeModal = () => {
     setCorrectCityName(false);
   };
+
   const accesLocationDenied = (err) => {
-    if (err.code) {
-      // El usuario denegó el acceso a la ubicación
-      handleCitySearch("Bogota");
-    }
+    if (err.code) handleCitySearch("Bogota");
   };
 
   useEffect(() => {
@@ -109,14 +116,11 @@ function App() {
           {cityWeather ? (
             <Weather weather={cityWeather} isDark={isDark} />
           ) : (
-            <Weather
-              weather={weatherInfo}
-              daysWeatherInfo={daysWeatherInfo}
-              isDark={isDark}
-            />
+            <Weather weather={weatherInfo} isDark={isDark} />
           )}
         </section>
       </main>
+      <Sugar customLoading={loading} />
     </>
   );
 }
