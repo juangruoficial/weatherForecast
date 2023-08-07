@@ -7,7 +7,6 @@ import axios from "axios";
 import Weather from "./components/Weather";
 import SearchForm from "./components/SearchForm";
 import { backgroundAccordingToWeather } from "./utilities/utilities.js";
-import { Sugar } from "react-preloaders";
 import ModalWrongCity from "./components/ModalWrongCity";
 
 function App() {
@@ -83,7 +82,6 @@ function App() {
 
   return (
     <>
-      <Sugar animation="slide" background="#000000" />
       <ModalWrongCity correctCityName={correctCityName} toClose={closeModal} />
       <main className={`background ${background}`}>
         {correctCityName && <div>HOLA MUNDI</div>}
