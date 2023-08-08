@@ -11,14 +11,20 @@
 }
 
 .modal_text {
+  display: flex;
+  text-align: center;
+  justify-content: center;
   padding: 2rem;
   border-radius: 1rem;
   font-size: 1rem;
   font-weight: bold;
   line-height: 2rem;
   width: 60%;
-  height: 150px;
+  height: 220px;
   background-color: rgba(185, 123, 123, 0.638);
   color: rgb(57, 8, 8);
-  text-align: center;
+}
+
+.text_modal {
+  align-self: center;
 }
