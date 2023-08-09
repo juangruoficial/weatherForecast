@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./styles/SearchForm.css";
+import "/public/styles/dark.css";
 
 const SearchForm = ({ onSearch, isDark }) => {
   const [cityName, setCityName] = useState("");

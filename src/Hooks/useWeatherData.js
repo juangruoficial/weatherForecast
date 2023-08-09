@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { backgroundAccordingToWeather } from "./utilities.js";
+import { backgroundAccordingToWeather } from "../utilities/utilities.js";
 
 function useWeatherData() {
   const [loading, setLoading] = useState(true);

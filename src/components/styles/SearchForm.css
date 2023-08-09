@@ -31,7 +31,7 @@
 
 .info_form_button {
   cursor: pointer;
-  color: white;
+  color: var(--colorTextDark);
   font-weight: bold;
   font-size: 1rem;
   background: var(--backgroundGradient);
@@ -43,4 +43,13 @@
 
 .info_form_button:hover {
   transform: scale(1.09);
+}
+
+.dark_input {
+  background-color: var(--background-colorBoxesDark);
+  color: var(--colorTextDark);
+}
+
+.dark_input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
 }

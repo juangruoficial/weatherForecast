@@ -1,5 +1,5 @@
 import InfoSection from "./InfoSection";
-import { useTemperature } from "../utilities/HooksWeather.js";
+import { useTemperature } from "../Hooks/useTemperature.js";
 
 const Weather = ({ weather, isDark }) => {
   const kelvinToCelsius = (kelvin) => parseInt(kelvin - 273.15);

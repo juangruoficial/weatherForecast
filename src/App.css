@@ -15,14 +15,14 @@
 
   --colorTextDark: white;
   --text-shadowDark: 1px -1px 5px rgb(0, 0, 0);
-  --background-colorBoxesDark: rgba(61, 44, 78, 0.479);
+  --background-colorBoxesDark: rgba(66, 64, 134, 0.655);
   --backgroundGradientDark: linear-gradient(
     90deg,
     rgb(25, 4, 253) 1%,
     rgb(0, 0, 0) 48%,
     rgb(9, 9, 9) 100%
   );
-  --background-colorBoxesDarkHover: rgba(160, 121, 208, 0.479);
+  --background-colorBoxesDarkHover: rgba(57, 47, 112, 0.626);
 }
 
 * {

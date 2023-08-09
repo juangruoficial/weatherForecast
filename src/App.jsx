@@ -1,18 +1,17 @@
 import "./App.css";
-import "./components/styles/SearchForm.css";
-import "./components/styles/Preloader.css";
 import "../public/styles/dark.css";
-import "./components/styles/SearchForm.css";
 import { useState } from "react";
 import { Sugar } from "react-preloaders";
 import ModalWrongCity from "./components/ModalWrongCity";
 import Weather from "./components/Weather";
 import SearchForm from "./components/SearchForm";
 import DarkModeButton from "./components/DarkModeButton";
-import useWeatherData from "./utilities/HooksApp.js";
+import useWeatherData from "./Hooks/useWeatherData.js";
+import Header from "./components/Header";
 
 function App() {
   const [isDark, setIsDark] = useState(true);
+  const mainTitle = "Weather Forecast";
 
   const {
     loading,
@@ -38,9 +37,7 @@ function App() {
       <main className={`background ${background}`}>
         <section className="main_section">
           <DarkModeButton isDark={isDark} toggleDarkMode={toggleDarkMode} />
-          <h1 className={`title_main_section ${isDark ? "dark_text" : ""}`}>
-            Weather Forecast
-          </h1>
+          <Header isDark={isDark} mainTitle={mainTitle} />
           <SearchForm onSearch={handleCitySearch} isDark={isDark} />
           <Weather weather={cityWeather || weatherInfo} isDark={isDark} />
         </section>

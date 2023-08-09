@@ -13,17 +13,3 @@
 .dark_gradient {
   background-color: var(--backgroundGradientDark);
 }
-
-.dark_input {
-  background-color: var(--background-colorBoxesDark);
-  color: var(--colorTextDark);
-}
-
-.dark_input::placeholder {
-  color: rgba(
-    255,
-    255,
-    255,
-    0.55
-  ); /* Cambia el color del marcador de posición a rojo */
-}
